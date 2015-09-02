@@ -2,7 +2,7 @@
  * jquery.flips.js
  *
  * Original work Copyright 2011, Pedro Botelho / Codrops
- * Modified work Copyright 2015 Thang Bui
+ * Modified work Copyright 2015 Thang Bui - thang.buinguyen at gmail.com, - All Rights Reserved
  * Free to use under the MIT license.
  *
  * Date: Fri Sep 2 2015
