@@ -41,6 +41,7 @@ function isIE() {
 }
 
 var isIE = isIE();
+var swiping = false;
 
 (function (window, undefined) {
     $.Flips = function (options, element) {
@@ -180,6 +181,10 @@ var isIE = isIE();
             this.$el.swipe({
                 threshold: 0,
                 swipeStatus: function (event, phase, start, end, direction, distance) {
+               	if (distance > 0 && phase == 'move') {
+                        swiping = true;
+
+                }
                     var startX = start.x,
                         endX = end.x,
                         sym, angle,
@@ -426,7 +431,10 @@ var isIE = isIE();
                     _self._adjustLayout(_self.currentPage);
                 }
             });
-            this.$flipPages.find('.box').on('click.flips', function (event) {
+            this.$flipPages.find('.box').on('touchend click.flips', function (event) {
+            	if (swiping) {
+                    return;
+                }
                 var $box = $(this),
                     $boxClose = $('<span class="box-close">close</span>'),
                     transitionProp = {
