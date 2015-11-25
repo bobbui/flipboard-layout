@@ -530,6 +530,7 @@ var swiping = false;
             });
         },
         _onEndFlip: function ($page) {
+            swiping = false;
             // if the page flips from left to right we will need to change the z-index of the flipped page
             if (( this.flipSide === 'l2r' && $page.data('flip') ) ||
                 ( this.flipSide === 'r2l' && !$page.data('flip') )) {
