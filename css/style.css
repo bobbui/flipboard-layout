@@ -49,6 +49,7 @@
 	left: 0px;
 	overflow: hidden;
 	z-index: 999;
+	background-color: #fff;
 }
 .page .content{
 	height: 100%;
